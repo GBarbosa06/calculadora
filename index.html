@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="result-area">
+            <p id="resultado"></p>
+        </section>
+        <section class="operator" onclick="addNum(7)">7</section>
+        <section class="operator" onclick="addNum(8)">8</section>
+        <section class="operator" onclick="addNum(9)">9</section>
+        <section class="operator" onclick="addNum('/')">÷</section>
+        <section class="operator" onclick="addNum(4)">4</section>
+        <section class="operator" onclick="addNum(5)">5</section>
+        <section class="operator" onclick="addNum(6)">6</section>
+        <section class="operator" onclick="addNum('*')">x</section>
+        <section class="operator" onclick="addNum(1)">1</section>
+        <section class="operator" onclick="addNum(2)">2</section>
+        <section class="operator" onclick="addNum(3)">3</section>
+        <section class="operator" onclick="addNum('-')">-</section>
+        <section class="operator" onclick="addNum(0)">0</section>
+        <section class="operator" onclick="addNum('.')">.</section>
+        <section class="operator" onclick="clean()">C</section>
+        <section class="operator" onclick="addNum('+')">+</section>
+        <section class="operator" onclick="calc()">=</section>
+    </main>
+
+    <script>
+        function addNum(n){
+            let num = document.querySelector('p#resultado').innerHTML;
+            document.querySelector('p#resultado').innerHTML += n;
+            
+        }
+        function clean(){
+            document.querySelector('p#resultado').innerHTML = "";
+        }
+
+        function calc(){
+            let res = document.querySelector('p#resultado').innerHTML
+            if(res){
+                document.querySelector('p#resultado').innerHTML = eval(res)
+            }
+            
+        }
+    </script>
+</body>
+</html>
