@@ -10,7 +10,7 @@
 <body>
     <main>
         <section class="result-area">
-            <p id="resultado"></p>
+            <p id="resultado">(3-2)*5</p>
         </section>
         <section class="operator" onclick="addNum(7)">7</section>
         <section class="operator" onclick="addNum(8)">8</section>
@@ -32,7 +32,12 @@
     </main>
 
     <script>
+        let reset = 0
         function addNum(n){
+            if(reset != 0){
+                clean()
+                reset = 0;
+            }
             let num = document.querySelector('p#resultado').innerHTML;
             document.querySelector('p#resultado').innerHTML += n;
             
@@ -46,6 +51,7 @@
             if(res){
                 document.querySelector('p#resultado').innerHTML = eval(res)
             }
+            reset++
             
         }
     </script>
