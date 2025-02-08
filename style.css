@@ -43,6 +43,10 @@ main{
     justify-content: center;
     display: flex;
 }
+.calculator{
+    background-color: rgba(0, 31, 172, 0.603);
+}
+
 .operator:hover{
     background-color: rgba(1, 56, 128, 0.144);
     transition: all .19s;
