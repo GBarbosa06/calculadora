@@ -58,7 +58,8 @@
             
         }
         function remNum(){
-            document.querySelector('p#resultado').innerHTML /= 10;
+            let res = document.querySelector('p#resultado').innerHTML;
+            document.querySelector('p#resultado').innerHTML = res.substring(0, res.length-1);
             
         }
     </script>
